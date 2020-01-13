@@ -1,4 +1,4 @@
-# Docker
+# Pin apt package version
 Ansible role to pin the version of an apt package using apt-mark hold.
 
 ## Role Variables

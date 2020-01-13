@@ -1,0 +1,14 @@
+---
+- name: Pin docker package
+  shell: |
+    set -e
+    if [[ $(apt-mark showholds {{ item }}) == '{{ item }}' ]]; then
+      echo -n ON_HOLD
+    else
+      apt-mark hold {{ item }}
+    fi
+  args:
+    executable: /bin/bash
+  register: package_hold
+  changed_when: package_hold.stdout != 'ON_HOLD'
+  with_items: "{{ pin_apt_packages_version_packages }}"

@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: ac
+  description: pin apt package version using apt-mark hold
+  license: license (MIT)
+  min_ansible_version: 2.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - buster
+  galaxy_tags: []
+dependencies: []

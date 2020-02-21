@@ -10,8 +10,7 @@ pin_apt_packages_version_packages: []
 ## Test
 ### Requirements
 - python >= 3.7
-- vagrant
-- virtualbox
+- docker
 
 ### Run
 ```bash

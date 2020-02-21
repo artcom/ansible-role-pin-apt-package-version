@@ -2,25 +2,21 @@
 dependency:
   name: galaxy
 driver:
-  name: vagrant
-  provider:
-    name: virtualbox
+  name: docker
 lint:
   name: yamllint
 platforms:
-  - name: xenial-role-pin-apt-package-version
-    box: ubuntu/xenial64
-  - name: bionic-role-pin-apt-package-version
-    box: ubuntu/bionic64
-  - name: buster-role-pin-apt-package-version
-    box: debian/buster64
+  - name: xenial
+    image: ubuntu:xenial
+  - name: bionic
+    image: ubuntu:bionic
+  - name: buster
+    image: debian:buster
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 verifier:
   name: testinfra
-  options:
-    sudo: true
   lint:
     name: flake8

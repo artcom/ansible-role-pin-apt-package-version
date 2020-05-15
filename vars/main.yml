@@ -1,0 +1,3 @@
+mandatory_vars:
+  package_name: "{{ package_name }}"
+  package_version: "{{ package_version }}"

@@ -7,7 +7,7 @@ Available variables are listed below, along with default values `(see defaults/m
 package_name: null
 package_version: null
 ```
-Mandatory variables (role will fail if the variables are not set):
+Required variables (role will fail if the variables are not set):
 ```yaml
 package_name: "string"
 package_version: "string"
